@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Summary | Manivannan Guru</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://unpkg.com/htmx.org@1.9.6"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Youtube Summary</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="urlInput">URL:</label>
+                        <input type="url" class="form-control" id="urlInput" name="videoUrl" placeholder="Enter URL"
+                            required>
+                    </div>
+                    <button type="button" class="btn btn-primary"
+                        hx-post="https://653f5479e6a145b9da08.appwrite.global/" hx-target="#summary">Submit</button>
+                    <div id="summary"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
